@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Jotter</string>
+    <string name="title_activity_main">Jotter</string>
+    <string name="package_name">com.jotter.app</string>
+    <string name="custom_url_scheme">com.jotter.app</string>
+</resources>
