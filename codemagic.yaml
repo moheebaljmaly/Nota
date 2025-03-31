@@ -5,12 +5,11 @@ workflows:
     instance_type: mac_mini_m1
     environment:
       android_signing:
-        - keystore_reference: keystore
-          keystore:
-            path: /tmp/keystore.keystore
-            password: $KEYSTORE_PASSWORD
-            key_alias: $KEY_ALIAS
-            key_password: $KEY_PASSWORD
+        - name: release
+          filePath: /tmp/keystore.keystore
+          type: generic
+          group: android_signing
+          source: env
       groups:
         - google_play
       vars:
