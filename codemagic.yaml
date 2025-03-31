@@ -6,7 +6,7 @@ workflows:
     environment:
       android_signing:
         - name: release
-          filePath: ./my-release-key.keystore  # المسار الجديد
+          filePath: ./my-release-key.keystore
           type: generic
           group: android_signing
           source: env
