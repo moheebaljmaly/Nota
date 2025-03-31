@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Keep important build files
+!my-release-key.keystore
+!codemagic.yaml
