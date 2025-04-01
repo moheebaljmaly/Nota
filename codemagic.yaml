@@ -6,9 +6,6 @@ workflows:
     environment:
       vars:
         PACKAGE_NAME: "com.jotter.app"
-      groups:
-        - google_play
-        - android_signing
     scripts:
       - name: Set up local properties
         script: |
