@@ -5,12 +5,15 @@ workflows:
     instance_type: mac_mini_m1
     environment:
       android_signing:
-        - keystore: release
-          name: release
-          filePath: ./my-release-key.keystore
+        - name: release
+          keystore: $CM_KEYSTORE
+          keystore_password: $CM_KEYSTORE_PASSWORD
+          key_alias: $CM_KEY_ALIAS
+          key_password: $CM_KEY_PASSWORD
           type: generic
-          group: android_signing
           source: env
+      vars:
+        PACKAGE_NAME: "com.jotter.app"
     scripts:
       - name: Set up local properties
         script: |
