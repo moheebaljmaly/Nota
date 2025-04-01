@@ -7,6 +7,9 @@ workflows:
       vars:
         PACKAGE_NAME: "com.jotter.app"
     scripts:
+      - name: Ensure gradlew has execute permissions
+        script: |
+          chmod +x gradlew
       - name: Set up local properties
         script: |
           echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/android/local.properties"
